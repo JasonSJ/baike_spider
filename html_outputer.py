@@ -12,7 +12,7 @@ class HtmlOutputer(object):
 
         fout = open('output.html', 'w')
 
-        fout.write('<html>')
+        fout.write('<html><meta charset="utf-8">')
         fout.write('<body>')
         fout.write('<table>')
 

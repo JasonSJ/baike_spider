@@ -31,11 +31,12 @@ class HtmlParser(object):
         return new_data
 
     def parse(self, page_url, html_cont):
+        print 'parse begin'
         if page_url is None or html_cont is None:
             return
 
         soup = BeautifulSoup(html_cont, 'html.parser', from_encoding='utf-8')
         new_urls = self._get_new_urls(page_url, soup)
         new_data = self._get_new_data(page_url, soup)
-
+        print 'parse end'
         return new_urls, new_data
